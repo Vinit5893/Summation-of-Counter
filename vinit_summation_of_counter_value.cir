@@ -1,0 +1,39 @@
+* C:\Users\vinit\eSim-Workspace\vinit_summation_of_counter_value\vinit_summation_of_counter_value.cir
+
+* EESchema Netlist Version 1.1 (Spice format) creation date: 10/08/22 21:16:06
+
+* To exclude a component from the Spice Netlist add [Spice_Netlist_Enabled] user FIELD set to: N
+* To reorder the component spice node sequence add [Spice_Node_Sequence] user FIELD and define sequence: 2,1,0
+
+* Sheet Name: /
+SC3  xor Net-_SC1-Pad2_ Net-_SC3-Pad3_ Net-_SC3-Pad3_ sky130_fd_pr__nfet_01v8_lvt		
+SC1  Net-_SC1-Pad1_ Net-_SC1-Pad2_ Net-_SC1-Pad3_ Net-_SC1-Pad1_ sky130_fd_pr__pfet_01v8_lvt		
+SC5  Net-_SC5-Pad1_ Net-_SC10-Pad1_ Net-_SC1-Pad3_ Net-_SC5-Pad1_ sky130_fd_pr__pfet_01v8_lvt		
+SC7  xor Net-_SC10-Pad1_ Net-_SC7-Pad3_ Net-_SC7-Pad3_ sky130_fd_pr__nfet_01v8_lvt		
+SC4  Net-_SC3-Pad3_ Net-_SC11-Pad2_ GND GND sky130_fd_pr__nfet_01v8_lvt		
+SC8  Net-_SC7-Pad3_ Net-_SC11-Pad1_ GND GND sky130_fd_pr__nfet_01v8_lvt		
+SC2  xor Net-_SC11-Pad1_ Net-_SC1-Pad1_ xor sky130_fd_pr__pfet_01v8_lvt		
+SC6  xor Net-_SC11-Pad2_ Net-_SC5-Pad1_ xor sky130_fd_pr__pfet_01v8_lvt		
+v1  Net-_SC1-Pad3_ GND 3		
+scmode1  SKY130mode		
+SC12  Net-_SC11-Pad1_ Net-_SC11-Pad2_ GND GND sky130_fd_pr__nfet_01v8_lvt		
+SC11  Net-_SC11-Pad1_ Net-_SC11-Pad2_ Net-_SC1-Pad3_ Net-_SC11-Pad1_ sky130_fd_pr__pfet_01v8_lvt		
+SC10  Net-_SC10-Pad1_ Net-_SC1-Pad2_ GND ? sky130_fd_pr__nfet_01v8_lvt		
+SC9  Net-_SC10-Pad1_ Net-_SC1-Pad2_ Net-_SC1-Pad3_ Net-_SC10-Pad1_ sky130_fd_pr__pfet_01v8_lvt		
+U4  xor Net-_U2-Pad1_ adc_bridge_1		
+SC14  inv Net-_SC11-Pad2_ GND GND sky130_fd_pr__nfet_01v8_lvt		
+SC13  inv Net-_SC11-Pad2_ Net-_SC1-Pad3_ inv sky130_fd_pr__pfet_01v8_lvt		
+U5  Net-_U1-Pad3_ Net-_U2-Pad3_ Net-_SC11-Pad2_ Net-_SC1-Pad2_ dac_bridge_2		
+U3  inv Net-_U1-Pad1_ adc_bridge_1		
+v2  CLK GND pulse		
+U10  CLK Net-_U1-Pad2_ adc_bridge_1		
+U7  C0 plot_v1		
+U9  C1 plot_v1		
+U6  CLK plot_v1		
+U8  Net-_U1-Pad3_ Net-_U2-Pad3_ C0 C1 dac_bridge_2		
+U2  Net-_U2-Pad1_ Net-_U1-Pad2_ Net-_U2-Pad3_ vinit_dff_v1		
+U1  Net-_U1-Pad1_ Net-_U1-Pad2_ Net-_U1-Pad3_ vinit_dff_v1		
+U11  xor plot_v1		
+U12  inv plot_v1		
+
+.end
