@@ -1,6 +1,6 @@
 * C:\Users\vinit\eSim-Workspace\vinit_summation_of_counter_value\vinit_summation_of_counter_value.cir
 
-* EESchema Netlist Version 1.1 (Spice format) creation date: 10/08/22 21:16:06
+* EESchema Netlist Version 1.1 (Spice format) creation date: 10/08/22 22:54:31
 
 * To exclude a component from the Spice Netlist add [Spice_Netlist_Enabled] user FIELD set to: N
 * To reorder the component spice node sequence add [Spice_Node_Sequence] user FIELD and define sequence: 2,1,0
@@ -20,20 +20,29 @@ SC12  Net-_SC11-Pad1_ Net-_SC11-Pad2_ GND GND sky130_fd_pr__nfet_01v8_lvt
 SC11  Net-_SC11-Pad1_ Net-_SC11-Pad2_ Net-_SC1-Pad3_ Net-_SC11-Pad1_ sky130_fd_pr__pfet_01v8_lvt		
 SC10  Net-_SC10-Pad1_ Net-_SC1-Pad2_ GND ? sky130_fd_pr__nfet_01v8_lvt		
 SC9  Net-_SC10-Pad1_ Net-_SC1-Pad2_ Net-_SC1-Pad3_ Net-_SC10-Pad1_ sky130_fd_pr__pfet_01v8_lvt		
-U4  xor Net-_U2-Pad1_ adc_bridge_1		
+U4  xor Net-_U2-Pad2_ adc_bridge_1		
 SC14  inv Net-_SC11-Pad2_ GND GND sky130_fd_pr__nfet_01v8_lvt		
 SC13  inv Net-_SC11-Pad2_ Net-_SC1-Pad3_ inv sky130_fd_pr__pfet_01v8_lvt		
-U5  Net-_U1-Pad3_ Net-_U2-Pad3_ Net-_SC11-Pad2_ Net-_SC1-Pad2_ dac_bridge_2		
-U3  inv Net-_U1-Pad1_ adc_bridge_1		
+U5  Net-_U1-Pad3_ Net-_U13-Pad1_ Net-_SC11-Pad2_ Net-_SC1-Pad2_ dac_bridge_2		
+U3  inv Net-_U1-Pad2_ adc_bridge_1		
 v2  CLK GND pulse		
-U10  CLK Net-_U1-Pad2_ adc_bridge_1		
+U10  CLK Net-_U1-Pad1_ adc_bridge_1		
 U7  C0 plot_v1		
 U9  C1 plot_v1		
 U6  CLK plot_v1		
-U8  Net-_U1-Pad3_ Net-_U2-Pad3_ C0 C1 dac_bridge_2		
-U2  Net-_U2-Pad1_ Net-_U1-Pad2_ Net-_U2-Pad3_ vinit_dff_v1		
+U8  Net-_U1-Pad3_ Net-_U13-Pad1_ C0 C1 dac_bridge_2		
+U2  Net-_U1-Pad1_ Net-_U2-Pad2_ Net-_U13-Pad1_ vinit_dff_v1		
 U1  Net-_U1-Pad1_ Net-_U1-Pad2_ Net-_U1-Pad3_ vinit_dff_v1		
 U11  xor plot_v1		
-U12  inv plot_v1		
+U12  Net-_U1-Pad3_ Net-_U12-Pad2_ Net-_U12-Pad3_ Net-_U12-Pad4_ Net-_U12-Pad5_ vinit_fa_v		
+U13  Net-_U13-Pad1_ Net-_U13-Pad2_ Net-_U12-Pad5_ Net-_U13-Pad4_ Net-_U13-Pad5_ vinit_fa_v		
+U14  Net-_U12-Pad4_ Net-_U1-Pad1_ Net-_U12-Pad2_ vinit_dff_v1		
+U15  Net-_U13-Pad4_ Net-_U1-Pad1_ Net-_U13-Pad2_ vinit_dff_v1		
+U16  GND Net-_U12-Pad3_ adc_bridge_1		
+U17  Net-_U12-Pad4_ Net-_U13-Pad4_ Net-_U13-Pad5_ E0 E1 E2 dac_bridge_3		
+U20  E2 plot_v1		
+U19  E1 plot_v1		
+U21  E0 plot_v1		
+U18  inv plot_v1		
 
 .end
