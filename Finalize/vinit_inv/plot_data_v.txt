@@ -1,5 +1,5 @@
       * c:\users\vinit\desktop\summation-of-counter\1fullfinal\inv\inv.cir
-      Transient Analysis  Sun Jan 29 01:18:46  2023
+      Transient Analysis  Sun Jan 29 12:36:40  2023
 --------------------------------------------------------------------------------
 Index   time                            a               m.x1.xsc1.msky1 
 --------------------------------------------------------------------------------
@@ -1983,7 +1983,7 @@ Index   time                            a               m.x1.xsc1.msky1
 1881	1.000000e+01	0.000000e+00	0.000000e+00	5.000000e+00	
 
       * c:\users\vinit\desktop\summation-of-counter\1fullfinal\inv\inv.cir
-      Transient Analysis  Sun Jan 29 01:18:46  2023
+      Transient Analysis  Sun Jan 29 12:36:40  2023
 --------------------------------------------------------------------------------
 Index   time            m.x1.xsc1.msky1 m.x1.xsc1.msky1 m.x1.xsc2.msky1 
 --------------------------------------------------------------------------------
@@ -3967,7 +3967,7 @@ Index   time            m.x1.xsc1.msky1 m.x1.xsc1.msky1 m.x1.xsc2.msky1
 1881	1.000000e+01	5.000000e+00	5.000000e+00	1.592320e-10	
 
       * c:\users\vinit\desktop\summation-of-counter\1fullfinal\inv\inv.cir
-      Transient Analysis  Sun Jan 29 01:18:46  2023
+      Transient Analysis  Sun Jan 29 12:36:40  2023
 --------------------------------------------------------------------------------
 Index   time            m.x1.xsc2.msky1 m.x1.xsc2.msky1 net-_x1-pad1_   
 --------------------------------------------------------------------------------
@@ -5951,7 +5951,7 @@ Index   time            m.x1.xsc2.msky1 m.x1.xsc2.msky1 net-_x1-pad1_
 1881	1.000000e+01	2.039645e-10	7.961664e-11	5.000000e+00	
 
       * c:\users\vinit\desktop\summation-of-counter\1fullfinal\inv\inv.cir
-      Transient Analysis  Sun Jan 29 01:18:46  2023
+      Transient Analysis  Sun Jan 29 12:36:40  2023
 --------------------------------------------------------------------------------
 Index   time            sky130_fd_pr__e x1.net-_sc1-pad x1.net-_sc1-pad 
 --------------------------------------------------------------------------------
@@ -7935,7 +7935,7 @@ Index   time            sky130_fd_pr__e x1.net-_sc1-pad x1.net-_sc1-pad
 1881	1.000000e+01	0.000000e+00	5.000000e+00	0.000000e+00	
 
       * c:\users\vinit\desktop\summation-of-counter\1fullfinal\inv\inv.cir
-      Transient Analysis  Sun Jan 29 01:18:46  2023
+      Transient Analysis  Sun Jan 29 12:36:40  2023
 --------------------------------------------------------------------------------
 Index   time            x1.net-_sc3-pad x1.xsc4.a       x1.xsc4.b1      
 --------------------------------------------------------------------------------
@@ -9919,7 +9919,7 @@ Index   time            x1.net-_sc3-pad x1.xsc4.a       x1.xsc4.b1
 1881	1.000000e+01	5.000000e+00	-2.20798e-12	-2.11943e-12	
 
       * c:\users\vinit\desktop\summation-of-counter\1fullfinal\inv\inv.cir
-      Transient Analysis  Sun Jan 29 01:18:46  2023
+      Transient Analysis  Sun Jan 29 12:36:40  2023
 --------------------------------------------------------------------------------
 Index   time            y               
 --------------------------------------------------------------------------------

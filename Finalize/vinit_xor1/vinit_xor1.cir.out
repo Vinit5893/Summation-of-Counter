@@ -1,11 +1,11 @@
 * c:\users\vinit\desktop\summation-of-counter\vinit_xor1\vinit_xor1.cir
 
-.include "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__diode_pd2nw_11v0.model.spice"
-.include "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__pnp.model.spice"
-.include "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__inductors.model.spice"
-.include "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__linear.model.spice"
 .include "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__diode_pw2nd_11v0.model.spice"
+.include "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__pnp.model.spice"
 .include "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__r+c.model.spice"
+.include "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__diode_pd2nw_11v0.model.spice"
+.include "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__linear.model.spice"
+.include "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__inductors.model.spice"
 .lib "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130.lib.spice" tt
 xsc3 net-_sc13-pad1_ a net-_sc3-pad3_ net-_sc3-pad3_ sky130_fd_pr__nfet_01v8_lvt 
 xsc1 net-_sc1-pad1_ a net-_sc1-pad3_ net-_sc1-pad3_ sky130_fd_pr__pfet_01v8_lvt 
@@ -26,8 +26,8 @@ xsc11 net-_sc11-pad1_ b net-_sc1-pad3_ net-_sc1-pad3_ sky130_fd_pr__pfet_01v8_lv
 xsc10 net-_sc10-pad1_ a gnd gnd sky130_fd_pr__nfet_01v8_lvt 
 xsc9 net-_sc10-pad1_ a net-_sc1-pad3_ net-_sc1-pad3_ sky130_fd_pr__pfet_01v8_lvt 
 * u3  y plot_v1
-xsc13 net-_sc13-pad1_ y net-_sc13-pad1_ sky130_fd_pr__res_generic_pd l=10 w=1
-xsc14 y gnd sky130_fd_pr__cap_mim_m3_1 l=100 w=100
+xsc13 net-_sc13-pad1_ y net-_sc13-pad1_ sky130_fd_pr__res_generic_pd l=50 w=1
+xsc14 y gnd sky130_fd_pr__cap_mim_m3_1 l=50 w=50
 .tran 0.001e-00 10e-00 0e-00
 
 * Control Statements 
@@ -35,8 +35,6 @@ xsc14 y gnd sky130_fd_pr__cap_mim_m3_1 l=100 w=100
 run
 print allv > plot_data_v.txt
 print alli > plot_data_i.txt
-plot v(a)
-plot v(b)
-plot v(y)
+plot v(b) +6 v(a) +13 v(y)
 .endc
 .end

@@ -1,5 +1,5 @@
       * c:\users\vinit\desktop\summation-of-counter\1fullfinal\inv\inv.cir
-      Transient Analysis  Sun Jan 29 01:18:46  2023
+      Transient Analysis  Sun Jan 29 12:36:40  2023
 --------------------------------------------------------------------------------
 Index   time            a.x1.a2#branch_ a2#branch_1_0   v1#branch       
 --------------------------------------------------------------------------------
@@ -1983,7 +1983,7 @@ Index   time            a.x1.a2#branch_ a2#branch_1_0   v1#branch
 1881	1.000000e+01	-6.17586e-12	0.000000e+00	0.000000e+00	
 
       * c:\users\vinit\desktop\summation-of-counter\1fullfinal\inv\inv.cir
-      Transient Analysis  Sun Jan 29 01:18:46  2023
+      Transient Analysis  Sun Jan 29 12:36:40  2023
 --------------------------------------------------------------------------------
 Index   time            v2#branch       
 --------------------------------------------------------------------------------

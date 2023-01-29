@@ -29,7 +29,6 @@ a2 [net-_u3-pad1_ ] [y ] u3
 run
 print allv > plot_data_v.txt
 print alli > plot_data_i.txt
-plot v(a)
-plot v(y)
+plot v(a) +6 v(y)
 .endc
 .end
