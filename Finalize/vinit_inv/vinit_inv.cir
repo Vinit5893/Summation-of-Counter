@@ -1,0 +1,18 @@
+* C:\Users\vinit\Desktop\SUMMATION-OF-COUNTER\1fullfinal\INV\INV.cir
+
+* EESchema Netlist Version 1.1 (Spice format) creation date: 01/29/23 01:08:33
+
+* To exclude a component from the Spice Netlist add [Spice_Netlist_Enabled] user FIELD set to: N
+* To reorder the component spice node sequence add [Spice_Node_Sequence] user FIELD and define sequence: 2,1,0
+
+* Sheet Name: /
+v2  Net-_X1-Pad1_ GND 5		
+U2  a Net-_U2-Pad2_ adc_bridge_1		
+scmode1  SKY130mode		
+X1  Net-_X1-Pad1_ Net-_U2-Pad2_ GND Net-_U3-Pad1_ vinit_inverter		
+v1  a GND pulse		
+U3  Net-_U3-Pad1_ y dac_bridge_1		
+U1  a plot_v1		
+U4  y plot_v1		
+
+.end

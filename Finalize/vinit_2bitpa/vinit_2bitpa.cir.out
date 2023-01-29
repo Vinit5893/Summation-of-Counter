@@ -1,0 +1,57 @@
+* c:\users\vinit\desktop\summation-of-counter\vinit_2bitpa\vinit_2bitpa.cir
+
+.include "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__linear.model.spice"
+.include "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__diode_pd2nw_11v0.model.spice"
+.include "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__r+c.model.spice"
+.lib "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130.lib.spice" tt
+.include "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__pnp.model.spice"
+.include "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__diode_pw2nd_11v0.model.spice"
+.include "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__inductors.model.spice"
+* u1  a1 a2 b1 b2 cin net-_u1-pad6_ net-_u1-pad7_ net-_u1-pad8_ vinit_2bitpa
+v1  net-_u2-pad1_ gnd pulse(0 5 4 1n 1n 4 8)
+v2  net-_u2-pad2_ gnd pulse(0 5 8 1n 1n 8 16)
+v3  net-_u2-pad3_ gnd pulse(0 5 1 1n 1n 1 2)
+* u3  a1 plot_v1
+* u5  a2 plot_v1
+* u7  b1 plot_v1
+* u6  b2 plot_v1
+* u10  s1 plot_v1
+* u9  s2 plot_v1
+* u8  c0 plot_v1
+* s c m o d e
+* u4  cin plot_v1
+* u2  net-_u2-pad1_ net-_u2-pad2_ net-_u2-pad3_ net-_u2-pad4_ gnd a1 a2 b1 b2 cin adc_bridge_5
+v4  net-_u2-pad4_ gnd pulse(0 5 2 1n 1n 2 4)
+* u11  net-_u1-pad6_ net-_u1-pad7_ net-_u1-pad8_ net-_sc1-pad1_ net-_sc2-pad1_ net-_sc3-pad1_ dac_bridge_3
+xsc1 net-_sc1-pad1_ s1 net-_sc1-pad1_ sky130_fd_pr__res_generic_pd l=50 w=1
+xsc2 net-_sc2-pad1_ s2 net-_sc2-pad1_ sky130_fd_pr__res_generic_pd l=50 w=1
+xsc3 net-_sc3-pad1_ c0 net-_sc3-pad1_ sky130_fd_pr__res_generic_pd l=50 w=1
+xsc6 s1 gnd sky130_fd_pr__cap_mim_m3_1 l=50 w=50
+xsc5 s2 gnd sky130_fd_pr__cap_mim_m3_1 l=50 w=50
+xsc4 c0 gnd sky130_fd_pr__cap_mim_m3_1 l=50 w=50
+a1 [a1 ] [a2 ] [b1 ] [b2 ] [cin ] [net-_u1-pad6_ ] [net-_u1-pad7_ ] [net-_u1-pad8_ ] u1
+a2 [net-_u2-pad1_ net-_u2-pad2_ net-_u2-pad3_ net-_u2-pad4_ gnd ] [a1 a2 b1 b2 cin ] u2
+a3 [net-_u1-pad6_ net-_u1-pad7_ net-_u1-pad8_ ] [net-_sc1-pad1_ net-_sc2-pad1_ net-_sc3-pad1_ ] u11
+* Schematic Name:                             vinit_2bitpa, NgSpice Name: vinit_2bitpa
+.model u1 vinit_2bitpa(rise_delay=1.0e-9 fall_delay=1.0e-9 input_load=1.0e-12 instance_id=1 ) 
+* Schematic Name:                             adc_bridge_5, NgSpice Name: adc_bridge
+.model u2 adc_bridge(in_low=1.0 in_high=2.0 rise_delay=1.0e-9 fall_delay=1.0e-9 ) 
+* Schematic Name:                             dac_bridge_3, NgSpice Name: dac_bridge
+.model u11 dac_bridge(out_low=0.0 out_high=5.0 out_undef=0.5 input_load=1.0e-12 t_rise=1.0e-9 t_fall=1.0e-9 ) 
+.tran 0.001e-00 16e-00 0e-00
+
+* Control Statements 
+.control
+run
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+plot v(a1)
+plot v(a2)
+plot v(b1)
+plot v(b2)
+plot v(s1)
+plot v(s2)
+plot v(c0)
+plot v(cin)
+.endc
+.end

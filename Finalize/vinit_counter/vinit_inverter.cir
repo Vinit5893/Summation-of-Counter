@@ -1,0 +1,17 @@
+* C:\FOSSEE\eSim\library\SubcircuitLibrary\vinit_inverter\vinit_inverter.cir
+
+* EESchema Netlist Version 1.1 (Spice format) creation date: 01/29/23 01:00:53
+
+* To exclude a component from the Spice Netlist add [Spice_Netlist_Enabled] user FIELD set to: N
+* To reorder the component spice node sequence add [Spice_Node_Sequence] user FIELD and define sequence: 2,1,0
+
+* Sheet Name: /
+SC2  Net-_SC1-Pad1_ Net-_SC1-Pad2_ Net-_SC2-Pad3_ Net-_SC2-Pad3_ sky130_fd_pr__nfet_01v8_lvt		
+SC1  Net-_SC1-Pad1_ Net-_SC1-Pad2_ Net-_SC1-Pad3_ Net-_SC1-Pad3_ sky130_fd_pr__pfet_01v8_lvt		
+SC3  Net-_SC1-Pad1_ Net-_SC3-Pad2_ Net-_SC1-Pad1_ sky130_fd_pr__res_generic_pd		
+SC4  Net-_SC3-Pad2_ Net-_SC2-Pad3_ sky130_fd_pr__cap_mim_m3_1		
+U5  Net-_SC3-Pad2_ Net-_U1-Pad4_ adc_bridge_1		
+U4  Net-_U1-Pad2_ Net-_SC1-Pad2_ dac_bridge_1		
+U1  Net-_SC1-Pad3_ Net-_U1-Pad2_ Net-_SC2-Pad3_ Net-_U1-Pad4_ PORT		
+
+.end
