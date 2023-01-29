@@ -127,10 +127,10 @@ Wire Wire Line
 	4000 2750 4500 2750
 Connection ~ 3500 3450
 $Comp
-L eSim_GND #PWR01
+L eSim_GND #PWR1
 U 1 1 63CBFD3E
 P 3500 3450
-F 0 "#PWR01" H 3500 3200 50  0001 C CNN
+F 0 "#PWR1" H 3500 3200 50  0001 C CNN
 F 1 "eSim_GND" H 3500 3300 50  0000 C CNN
 F 2 "" H 3500 3450 50  0001 C CNN
 F 3 "" H 3500 3450 50  0001 C CNN
@@ -175,10 +175,10 @@ F 3 "" H 6750 2950 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L sky130_fd_pr__res_generic_pd SC?
+L sky130_fd_pr__res_generic_pd SC3
 U 1 1 63CC05F5
 P 5700 2750
-F 0 "SC?" H 5850 3037 50  0000 C CNN
+F 0 "SC3" H 5850 3037 50  0000 C CNN
 F 1 "sky130_fd_pr__res_generic_pd" H 5850 2862 50  0000 R CNN
 F 2 "" H 5700 1250 50  0001 C CNN
 F 3 "" H 5700 2750 50  0001 C CNN
@@ -192,10 +192,10 @@ Wire Wire Line
 Wire Wire Line
 	6000 2750 6750 2750
 $Comp
-L sky130_fd_pr__cap_mim_m3_1 SC?
+L sky130_fd_pr__cap_mim_m3_1 SC4
 U 1 1 63CC066C
 P 6000 3050
-F 0 "SC?" H 6150 3337 50  0000 C CNN
+F 0 "SC4" H 6150 3337 50  0000 C CNN
 F 1 "sky130_fd_pr__cap_mim_m3_1" H 6150 3162 50  0000 R CNN
 F 2 "" H 6000 1550 50  0001 C CNN
 F 3 "" H 6000 3050 50  0001 C CNN

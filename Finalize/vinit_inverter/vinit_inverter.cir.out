@@ -1,29 +1,28 @@
 * c:\users\vinit\desktop\summation-of-counter\vinit_inverter\vinit_inverter.cir
 
-.lib "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130.lib.spice" tt
 .include "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__pnp.model.spice"
-.include "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__diode_pd2nw_11v0.model.spice"
-.include "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__linear.model.spice"
-.include "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__inductors.model.spice"
 .include "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__diode_pw2nd_11v0.model.spice"
+.include "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__inductors.model.spice"
+.lib "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130.lib.spice" tt
+.include "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__diode_pd2nw_11v0.model.spice"
 .include "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__r+c.model.spice"
+.include "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__linear.model.spice"
 xsc2 net-_sc1-pad1_ a gnd gnd sky130_fd_pr__nfet_01v8_lvt 
 xsc1 net-_sc1-pad1_ a net-_sc1-pad3_ net-_sc1-pad3_ sky130_fd_pr__pfet_01v8_lvt 
 v1  net-_sc1-pad3_ gnd 1.8
-v2  a gnd pulse(0 1.8 1ns 1ns 1ns 1 2)
+v2  a gnd pulse(0 1.8 0 0.1ns 0.1ns 1 2)
 * s c m o d e
 * u1  a plot_v1
 * u2  y plot_v1
-xsc3 net-_sc1-pad1_ y net-_sc1-pad1_ sky130_fd_pr__res_generic_pd l=1 w=1
-xsc4 y gnd sky130_fd_pr__cap_mim_m3_1 l=1 w=1
-.tran 1e-00 10e-00 0e-00
+xsc3 net-_sc1-pad1_ y net-_sc1-pad1_ sky130_fd_pr__res_generic_pd l=5 w=1
+xsc4 y gnd sky130_fd_pr__cap_mim_m3_1 l=50 w=50
+.tran 0.001e-00 10e-00 0e-00
 
 * Control Statements 
 .control
 run
 print allv > plot_data_v.txt
 print alli > plot_data_i.txt
-plot v(a)
-plot v(y)
+plot v(a)+2 v(y)
 .endc
 .end
