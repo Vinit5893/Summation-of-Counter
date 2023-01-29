@@ -24,8 +24,6 @@ a3 [net-_u1-pad3_ ] [q ] u3
 run
 print allv > plot_data_v.txt
 print alli > plot_data_i.txt
-plot v(q)
-plot v(d)
-plot v(clk)
+plot v(q) v(d)+6 v(clk)+12
 .endc
 .end

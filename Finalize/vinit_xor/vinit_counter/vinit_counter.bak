@@ -1,0 +1,193 @@
+EESchema Schematic File Version 2
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:power
+LIBS:eSim_Plot
+LIBS:transistors
+LIBS:conn
+LIBS:eSim_User
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:eSim_Analog
+LIBS:eSim_Devices
+LIBS:eSim_Digital
+LIBS:eSim_Hybrid
+LIBS:eSim_Miscellaneous
+LIBS:eSim_Power
+LIBS:eSim_Sources
+LIBS:eSim_Subckt
+LIBS:eSim_Nghdl
+LIBS:eSim_Ngveri
+LIBS:eSim_SKY130
+LIBS:eSim_SKY130_Subckts
+LIBS:vinit_counter-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L vinit_dff U1
+U 1 1 636F1CF1
+P 1150 5800
+F 0 "U1" H 4000 7600 60  0000 C CNN
+F 1 "vinit_dff" H 4000 7800 60  0000 C CNN
+F 2 "" H 4000 7750 60  0000 C CNN
+F 3 "" H 4000 7750 60  0000 C CNN
+	1    1150 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L vinit_dff U5
+U 1 1 636F1D73
+P 3950 5700
+F 0 "U5" H 6800 7500 60  0000 C CNN
+F 1 "vinit_dff" H 6800 7700 60  0000 C CNN
+F 2 "" H 6800 7650 60  0000 C CNN
+F 3 "" H 6800 7650 60  0000 C CNN
+	1    3950 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L vinit_not U7
+U 1 1 636F2057
+P 6750 1600
+F 0 "U7" H 9600 3400 60  0000 C CNN
+F 1 "vinit_not" H 9600 3600 60  0000 C CNN
+F 2 "" H 9600 3550 60  0000 C CNN
+F 3 "" H 9600 3550 60  0000 C CNN
+	1    6750 1600
+	-1   0    0    1   
+$EndComp
+$Comp
+L pulse v1
+U 1 1 636F246A
+P 1700 4000
+F 0 "v1" H 1500 4100 60  0000 C CNN
+F 1 "pulse" H 1500 3950 60  0000 C CNN
+F 2 "R1" H 1400 4000 60  0000 C CNN
+F 3 "" H 1700 4000 60  0000 C CNN
+	1    1700 4000
+	0    1    1    0   
+$EndComp
+$Comp
+L adc_bridge_1 U3
+U 1 1 636F24F8
+P 2750 4050
+F 0 "U3" H 2750 4050 60  0000 C CNN
+F 1 "adc_bridge_1" H 2750 4200 60  0000 C CNN
+F 2 "" H 2750 4050 60  0000 C CNN
+F 3 "" H 2750 4050 60  0000 C CNN
+	1    2750 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L eSim_GND #PWR01
+U 1 1 636F25E3
+P 1250 4000
+F 0 "#PWR01" H 1250 3750 50  0001 C CNN
+F 1 "eSim_GND" H 1250 3850 50  0000 C CNN
+F 2 "" H 1250 4000 50  0001 C CNN
+F 3 "" H 1250 4000 50  0001 C CNN
+	1    1250 4000
+	1    0    0    -1  
+$EndComp
+Text GLabel 7500 3800 2    60   Output ~ 0
+q1
+Text GLabel 4700 3900 3    60   Output ~ 0
+q0
+Text GLabel 3300 4600 0    60   Input ~ 0
+clk
+$Comp
+L plot_v1 U4
+U 1 1 636F280D
+P 3300 4400
+F 0 "U4" H 3300 4900 60  0000 C CNN
+F 1 "plot_v1" H 3500 4750 60  0000 C CNN
+F 2 "" H 3300 4400 60  0000 C CNN
+F 3 "" H 3300 4400 60  0000 C CNN
+	1    3300 4400
+	-1   0    0    1   
+$EndComp
+$Comp
+L plot_v1 U6
+U 1 1 636F28B3
+P 4700 3700
+F 0 "U6" H 4700 4200 60  0000 C CNN
+F 1 "plot_v1" H 4900 4050 60  0000 C CNN
+F 2 "" H 4700 3700 60  0000 C CNN
+F 3 "" H 4700 3700 60  0000 C CNN
+	1    4700 3700
+	-1   0    0    1   
+$EndComp
+$Comp
+L plot_v1 U8
+U 1 1 636F2929
+P 7500 3600
+F 0 "U8" H 7500 4100 60  0000 C CNN
+F 1 "plot_v1" H 7700 3950 60  0000 C CNN
+F 2 "" H 7500 3600 60  0000 C CNN
+F 3 "" H 7500 3600 60  0000 C CNN
+	1    7500 3600
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7500 3800 7500 3500
+Wire Wire Line
+	7500 3500 4700 3500
+Wire Wire Line
+	4700 3500 4700 3800
+Wire Wire Line
+	4600 3500 4600 3900
+Wire Wire Line
+	4600 3900 4700 3900
+Wire Wire Line
+	3200 3500 3200 3900
+Wire Wire Line
+	3200 3900 3300 3900
+Wire Wire Line
+	6100 3900 6100 4600
+Wire Wire Line
+	6100 4600 3300 4600
+Wire Wire Line
+	3300 4600 3300 4000
+$Comp
+L vinit_xor U2
+U 1 1 636F1E33
+P 2550 5700
+F 0 "U2" H 5400 7500 60  0000 C CNN
+F 1 "vinit_xor" H 5400 7700 60  0000 C CNN
+F 2 "" H 5400 7650 60  0000 C CNN
+F 3 "" H 5400 7650 60  0000 C CNN
+	1    2550 5700
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

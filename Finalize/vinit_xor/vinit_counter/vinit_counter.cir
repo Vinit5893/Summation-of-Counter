@@ -1,0 +1,29 @@
+* C:\Users\vinit\Desktop\SUMMATION-OF-COUNTER\vinit_counter\vinit_counter.cir
+
+* EESchema Netlist Version 1.1 (Spice format) creation date: 11/13/22 20:11:07
+
+* To exclude a component from the Spice Netlist add [Spice_Netlist_Enabled] user FIELD set to: N
+* To reorder the component spice node sequence add [Spice_Node_Sequence] user FIELD and define sequence: 2,1,0
+
+* Sheet Name: /
+U1  Net-_U1-Pad1_ Net-_U1-Pad2_ Net-_U1-Pad3_ vinit_dff		
+U5  Net-_U5-Pad1_ Net-_U1-Pad2_ Net-_U15-Pad2_ vinit_dff		
+U7  Net-_U1-Pad3_ Net-_U1-Pad1_ vinit_not		
+v1  clk GND pulse		
+U3  clk Net-_U1-Pad2_ adc_bridge_1		
+U4  clk plot_v1		
+U6  q0 plot_v1		
+U8  q1 plot_v1		
+scmode1  SKY130mode		
+X1  GND Net-_U15-Pad2_ Net-_U1-Pad3_ Net-_X1-Pad4_ Net-_U5-Pad1_ vinit_XOR		
+v2  Net-_X1-Pad4_ GND 5		
+U2  Net-_U1-Pad3_ Net-_U15-Pad2_ Net-_U13-Pad3_ Net-_U14-Pad3_ Net-_U2-Pad5_ Net-_U13-Pad1_ Net-_U14-Pad1_ Net-_U15-Pad5_ vinit_2bitpa		
+U13  Net-_U13-Pad1_ Net-_U1-Pad2_ Net-_U13-Pad3_ vinit_dff		
+U14  Net-_U14-Pad1_ Net-_U1-Pad2_ Net-_U14-Pad3_ vinit_dff		
+U9  GND Net-_U2-Pad5_ adc_bridge_1		
+U11  s0 plot_v1		
+U10  s2 plot_v1		
+U12  s1 plot_v1		
+U15  Net-_U1-Pad3_ Net-_U15-Pad2_ Net-_U13-Pad1_ Net-_U14-Pad1_ Net-_U15-Pad5_ q0 q1 s0 s1 s2 dac_bridge_5		
+
+.end
